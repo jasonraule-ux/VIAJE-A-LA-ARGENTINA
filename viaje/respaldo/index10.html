@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B2A5B">
+<title>Buenos Aires 2026</title>
+<style>
+:root{--n:#0B2A5B;--n2:#14407F;--c:#8FD3F4;--c2:#EAF6FD;--l:#CFE9F8;--o:#FFC93C;--ok:#1F9D55;--wa:#B45309;--r:22px;--sh:0 4px 16px rgba(11,42,91,.13)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:19px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--n);background:var(--c2);padding:env(safe-area-inset-top) env(safe-area-inset-right) calc(88px + env(safe-area-inset-bottom)) env(safe-area-inset-left);overflow-x:hidden}
+img{max-width:100%;display:block}
+img.broken{visibility:hidden}
+:focus-visible{outline:4px solid var(--o);outline-offset:2px}
+button,.btn{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:18px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;padding:12px 16px;text-align:center;-webkit-tap-highlight-color:transparent}
+button:active,.btn:active{transform:scale(.98)}
+.s{display:none;max-width:1000px;margin:auto;padding:14px 14px 24px}.s.on{display:block}
+h2.t{font-size:1.8rem;margin:6px 0 14px;line-height:1.15}
+.back{background:#fff;color:var(--n);box-shadow:var(--sh);margin-bottom:12px;justify-content:flex-start;font-size:1.1rem}
+.hero{position:relative;border-radius:28px;overflow:hidden;background:var(--n);color:#fff;box-shadow:var(--sh)}
+.hero>img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%;opacity:.6}
+.hero .in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:linear-gradient(0deg,rgba(11,42,91,.9),rgba(11,42,91,0) 70%)}
+.hero h1{font-size:clamp(1.9rem,9vw,3.2rem);line-height:1.05}
+.chip{display:inline-block;background:var(--c);color:var(--n);font-weight:700;border-radius:30px;padding:6px 14px;margin-top:8px;font-size:1.05rem;align-self:flex-start}
+.fam{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px auto;max-width:480px}
+.fam div{text-align:center;font-weight:700;font-size:1rem}
+.fam img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:24%;border:3px solid #fff;box-shadow:var(--sh);margin-bottom:4px;background:var(--l)}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);margin-bottom:16px;overflow:hidden}
+.pad{padding:16px}
+.big{background:var(--n);color:#fff;font-size:1.15rem;width:100%}.big.l{background:var(--l);color:var(--n)}.big.ok{background:var(--ok)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.tile{background:#fff;color:var(--n);flex-direction:column;box-shadow:var(--sh);min-height:104px;font-size:1.15rem}.tile span{font-size:2.2rem;line-height:1}
+.cd{background:var(--n);color:#fff;text-align:center;border-radius:var(--r);padding:16px;box-shadow:var(--sh)}
+.cd .n{font-size:2.2rem;font-weight:800;color:var(--c);line-height:1.15}.cd small{font-size:1.05rem}
+.key{background:var(--o);padding:12px 14px;border-radius:16px;font-weight:700;margin:10px 0}
+.g2{display:grid;gap:16px;grid-template-columns:1fr}
+.ph{width:100%;aspect-ratio:16/9;object-fit:cover;background:linear-gradient(135deg,var(--c),var(--n2))}
+.pp img.pi{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:var(--l)}
+.day{border-top:10px solid var(--dc)}
+.day h3,.fl h3{font-size:1.35rem}
+.tag{display:inline-block;color:#fff;background:var(--dc);border-radius:20px;padding:3px 14px;font-weight:700;font-size:1rem}
+.prog{color:var(--n2);font-weight:700;margin-top:4px}
+.pp{border-top:1px solid var(--c2)}
+.pp summary{font-size:1.2rem;font-weight:700;color:var(--n);padding:14px 0;min-height:60px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pp summary::-webkit-details-marker,.ia summary::-webkit-details-marker{display:none}
+.pp summary::after,.ia summary::after{content:'▾';color:var(--n2);font-size:1.4rem}.pp[open] summary::after,.ia[open] summary::after{content:'▴'}
+.pp p{margin:8px 0 12px}.pp .btn,.pp button{margin-bottom:12px}
+.vt{color:var(--ok);font-weight:800}
+.vb{background:var(--l);color:var(--n)}.vb.on{background:var(--ok);color:#fff}
+details{margin-top:6px}
+summary{cursor:pointer;color:var(--n2);font-weight:700;padding:10px 0;min-height:52px;display:flex;align-items:center}
+textarea,input,select{font:inherit;width:100%;padding:14px;border:2px solid var(--c);border-radius:14px;color:var(--n);background:#fff;min-width:0;min-height:56px}
+textarea{min-height:90px}
+small.k{display:block;color:var(--n2);font-weight:700;margin:6px 0 2px}
+.fl{border-top:10px solid var(--dc)}
+.st{display:inline-block;border-radius:20px;padding:3px 12px;font-weight:700;font-size:.95rem;margin-left:6px}
+.st.ok{background:#DDF3E6;color:#136B3A}.st.wa{background:#FFE8C2;color:var(--wa)}
+.hr{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.hr div{background:var(--c2);border-radius:14px;padding:10px}
+.hr small{display:block;color:var(--n2);font-weight:700}.hr b{font-size:1.5rem;display:block;line-height:1.2}.hr span{font-size:.95rem}
+.pas{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--c2)}
+.pas img{width:56px;height:56px;border-radius:24%;object-fit:cover;object-position:50% 30%;flex:none;background:var(--l)}
+.pas div{flex:1;min-width:0}.pas small{display:block;color:var(--n2)}
+.cod{font-weight:800;letter-spacing:1px;font-size:1.15rem}.cod.p{color:var(--wa);letter-spacing:0;font-size:1rem}
+.sec{font-size:1.25rem;font-weight:800;margin:18px 0 10px}
+.tots{display:grid;gap:10px;margin-bottom:16px}
+.tot{background:var(--n);color:#fff;border-radius:var(--r);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tot small{font-weight:700;font-size:1rem}.tot .n{font-size:1.8rem;font-weight:800;color:var(--c)}
+.gi{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 0;border-bottom:1px solid var(--c2)}.gi small{color:var(--n2);font-size:.95rem}
+.gi .a{display:flex;gap:6px;flex:none}.gi button{min-height:52px;min-width:52px;padding:6px 12px;font-size:1.1rem;background:var(--l);color:var(--n)}.gi button.x{background:#fde2e2;color:#a11}
+.gi button.si{background:#a11;color:#fff;font-size:1rem}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;margin-top:10px}.mt{margin-top:10px}
+.err{color:#a11;font-weight:700;margin-top:8px}.okm{color:var(--ok);font-weight:700;margin-top:8px}
+.ia{margin:0 0 14px}.ia summary{padding:18px 16px;list-style:none;font-size:1.25rem;color:var(--n);justify-content:space-between;gap:8px;min-height:68px}
+.ia .pad{border-top:1px solid var(--c2)}
+.ck{display:flex;align-items:center;gap:14px;padding:10px 0;font-weight:600;cursor:pointer}
+.ck input{width:32px;height:32px;min-height:0;padding:0;flex:none;accent-color:var(--ok)}
+.ll{display:flex;gap:10px;margin-top:10px}.ll .btn{flex:1}
+ul.tips{padding-left:22px}ul.tips li{margin:8px 0}
+.mini{color:var(--n2);font-size:1rem;margin:8px 0}
+#saved{position:fixed;bottom:calc(96px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;padding:8px 20px;border-radius:30px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:60}#saved.on{opacity:1}
+nav a{text-decoration:none;color:var(--n);font-weight:600}
+nav.bn{position:fixed;left:0;right:0;bottom:0;background:#fff;display:flex;padding:6px 2px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(11,42,91,.15);z-index:40}
+nav.bn a{flex:1;min-width:0;text-align:center;font-size:.7rem;padding:4px 0;border-radius:14px;min-height:58px;overflow:hidden}nav.bn a span{display:block;font-size:1.6rem;line-height:1.25}nav a.on{background:var(--l)}
+nav.tn{display:none}
+@media(min-width:640px){.g2{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:repeat(3,1fr)}.hero .in{padding:28px}.tots{grid-template-columns:repeat(3,1fr)}.tot{flex-direction:column;text-align:center}}
+@media(min-width:900px){body{padding-bottom:20px}nav.bn{display:none}nav.tn{display:flex;position:sticky;top:0;z-index:40;background:var(--n);justify-content:center;gap:6px;padding:8px}nav.tn a{color:#fff;padding:10px 16px;border-radius:24px}nav.tn a.on{background:var(--c);color:var(--n)}#saved{bottom:20px}}
+</style></head><body>
+<nav class="tn" id="tn"></nav>
+
+<!-- INICIO -->
+<section class="s on" id="inicio">
+ <div class="hero"><img src="img/lugares/portada.jpg" alt="Buenos Aires"><div class="in"><h1>BUENOS AIRES 2026 🇦🇷</h1><span class="chip">📅 12 al 16 de noviembre de 2026</span></div></div>
+ <div class="fam">
+  <div><img src="img/familia/mama.jpg" alt="Mamá">Mamá</div><div><img src="img/familia/papa.jpg" alt="Papá">Papá</div>
+  <div><img src="img/familia/raul.jpg" alt="Raúl">Raúl</div><div><img src="img/familia/mathias.jpg" alt="Mathias">Mathias</div></div>
+ <div class="cd" id="cd"></div>
+ <div class="tiles" id="tiles"></div>
+ <div class="card pad" id="hoy"></div>
+ <div class="card"><img src="img/alojamiento/1.jpg" alt="Airbnb" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 35%;background:var(--l)"><div class="pad"><b>🏠 Nuestro Airbnb</b><div class="key">🔑 Llaves: jueves 12, 8:30 a. m.</div><div>Rodríguez Peña 140</div><a class="btn big mt" target="_blank" rel="noopener" href="https://goo.gl/maps/SQQerQRgd6UhK2sK6?g_st=aw">📍 ABRIR UBICACIÓN EN GOOGLE MAPS</a></div></div>
+</section>
+
+<!-- NUESTRO VIAJE -->
+<section class="s" id="viaje"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">🧳 Nuestro viaje</h2>
+ <div class="card pad"><b>📅 Del jueves 12 al lunes 16 de noviembre de 2026</b>
+  <p class="mini">Toca un día para ver qué vamos a hacer.</p><div id="resumen"></div></div>
+ <div class="card pad"><b>🏠 Dónde nos quedamos</b><p>Rodríguez Peña 140, Buenos Aires</p><a class="btn big l mt" href="#alojo">Ver alojamiento</a></div>
+</section>
+
+<!-- ITINERARIO -->
+<section class="s" id="dias"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">📅 Itinerario</h2>
+ <p class="mini">Toca un lugar para ver la foto y el mapa. Marca ✔ cuando ya lo visitaste.</p><div class="g2" id="listaDias"></div></section>
+
+<!-- VUELOS -->
+<section class="s" id="vuelos"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">✈️ Vuelos</h2>
+ <p class="mini">✔ Confirmado: ya tiene código de reserva. ⏳ Falta confirmar: todavía no tiene código.</p><div id="listaV"></div></section>
+
+<!-- ALOJAMIENTO -->
+<section class="s" id="alojo"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">🏠 Alojamiento</h2>
+ <div class="card"><img src="img/alojamiento/1.jpg" alt="Edificio del Airbnb" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 35%;background:var(--l)">
+ <div class="pad"><h3 style="font-size:1.45rem">Airbnb Buenos Aires</h3>
+  <div class="key">🔑 Entrega de llaves: jueves 12 de noviembre, 8:30 a. m.<br>⏰ Debemos llegar a las 8:30 a. m.</div>
+  <p><b>Dirección completa:</b><br>Rodríguez Peña 140, Buenos Aires, Buenos Aires C1020, Argentina</p>
+  <a class="btn big mt" target="_blank" rel="noopener" href="https://goo.gl/maps/SQQerQRgd6UhK2sK6?g_st=aw">📍 ABRIR UBICACIÓN EN GOOGLE MAPS</a>
+  <p class="mt"><b>💰 Costo del alojamiento</b></p><div class="two" style="margin-top:0"><div><small class="k">Soles (S/)</small><input id="cS" inputmode="decimal"></div><div><small class="k">Dólares (US$)</small><input id="cU" inputmode="decimal" placeholder="opcional"></div></div>
+  <button class="big l mt" onclick="addAir()">➕ Incluir en los gastos</button><div id="airMsg"></div>
+  <details open><summary>📝 Notas</summary><textarea data-k="notaAlojo" placeholder="Escribe aquí..."></textarea></details></div></div></section>
+
+<!-- GASTOS -->
+<section class="s" id="gastos"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">💰 Gastos</h2>
+ <p class="mini">Cada moneda se muestra por separado. No se suman entre sí.</p>
+ <div class="tots" id="totales"></div>
+ <div class="card pad"><b id="ft">Anotar un gasto nuevo</b>
+  <small class="k">¿Qué tipo de gasto es?</small><select id="cat"></select>
+  <small class="k">Detalle (opcional)</small><input id="nota" placeholder="Ejemplo: almuerzo">
+  <div class="two"><div><small class="k">Importe</small><input id="monto" type="number" inputmode="decimal" placeholder="0.00"></div><div><small class="k">Moneda</small><select id="mon"><option value="S/">Soles (S/)</option><option value="US$">Dólares (US$)</option><option value="$ argentinos">Pesos argentinos</option><option value="Por confirmar">Por confirmar</option></select></div></div>
+  <div class="err" id="err"></div>
+  <button class="big ok mt" id="bg" onclick="addG()">➕ GUARDAR</button><button class="big l mt" id="bc" onclick="cancelE()" style="display:none">Cancelar</button></div>
+ <div class="card pad"><details><summary>📊 Ver gastos por categoría</summary><div id="porCat"></div></details></div>
+ <div class="card pad"><b>📋 Historial</b><div id="histG"></div></div></section>
+
+<!-- INFORMACIÓN IMPORTANTE -->
+<section class="s" id="info"><a class="btn back" href="#inicio">⬅ Volver al inicio</a><h2 class="t">ℹ️ Información importante</h2>
+ <p class="mini">Toca una tarjeta para abrirla.</p><div id="infoL"></div>
+ <div class="card pad"><b>💾 Sobre el guardado</b><p class="mini">Lo que escribes (gastos, notas, lugares visitados) se guarda solo en este celular. No pasa a los otros celulares de la familia.</p></div></section>
+
+<div id="saved">✔ Guardado</div>
+<nav class="bn" id="bn"></nav>
+
+<script>
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* Almacenamiento en este dispositivo (localStorage). No se sincroniza con otros celulares. */
+const Store={get(k,d){try{const v=JSON.parse(localStorage.getItem('arg_'+k));return v??d}catch(e){return d}},
+ set(k,v){try{localStorage.setItem('arg_'+k,JSON.stringify(v));const s=$('saved');s.classList.add('on');setTimeout(()=>s.classList.remove('on'),900)}catch(e){}}};
+function bind(r){r.querySelectorAll('[data-k]').forEach(e=>{const k=e.dataset.k;e.value=Store.get(k,'');e.oninput=()=>Store.set(k,e.value)})}
+document.addEventListener('error',e=>{if(e.target.tagName=='IMG')e.target.classList.add('broken')},true);
+
+/* Menú */
+const NAV=[['inicio','🏠','Inicio'],['dias','📅','Días'],['vuelos','✈️','Vuelos'],['alojo','🛏️','Casa'],['gastos','💰','Gastos'],['info','ℹ️','Importante']];
+const FULL=['viaje'];
+$('tn').innerHTML=NAV.map(n=>`<a href="#${n[0]}" data-t="${n[0]}">${n[1]} ${n[2]}</a>`).join('');
+$('bn').innerHTML=NAV.map(n=>`<a href="#${n[0]}" data-t="${n[0]}"><span>${n[1]}</span>${n[2]}</a>`).join('');
+const TILES=[['viaje','🧳','Nuestro viaje'],['dias','📅','Itinerario'],['vuelos','✈️','Vuelos'],['alojo','🏠','Alojamiento'],['gastos','💰','Gastos'],['info','ℹ️','Información importante']];
+$('tiles').innerHTML=TILES.map(n=>`<a class="btn tile" href="#${n[0]}"><span>${n[1]}</span>${n[2]}</a>`).join('');
+function ir(){const h=location.hash.slice(1),ok=NAV.some(n=>n[0]==h)||FULL.includes(h)?h:'inicio';
+ document.querySelectorAll('.s').forEach(s=>s.classList.toggle('on',s.id===ok));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t==(ok=='viaje'?'inicio':ok)));scrollTo(0,0)}
+addEventListener('hashchange',ir);
+
+/* Lugares (14) */
+const MAP='https://www.google.com/maps/search/?api=1&query=';
+const L={'casa-rosada':['Casa Rosada','Sede del gobierno frente a la Plaza de Mayo, famosa por su color rosado.','Casa Rosada Balcarce 50'],
+'centro-historico':['Centro Histórico','Plaza de Mayo y los edificios históricos del corazón de la ciudad.','Plaza de Mayo'],
+'obelisco':['Obelisco','El gran símbolo de Buenos Aires, sobre la avenida 9 de Julio.','Obelisco'],
+'teatro-colon':['Teatro Colón','Uno de los teatros de ópera más admirados del mundo.','Teatro Colón Cerrito 628'],
+'galerias-pacifico':['Galerías Pacífico','Galería histórica con cúpulas pintadas, en la peatonal Florida.','Galerías Pacífico Florida 753'],
+'caminito':['Caminito (La Boca)','Calle de casas de mil colores, ícono de La Boca y del tango.','Caminito La Boca'],
+'san-telmo':['San Telmo','Calles empedradas, anticuarios y la Plaza Dorrego.','Plaza Dorrego San Telmo'],
+'recoleta':['Recoleta','Barrio elegante con plazas y la gran flor metálica Floralis.','Floralis Genérica'],
+'cementerio':['Cementerio de la Recoleta','Mausoleos y esculturas en uno de los cementerios más famosos.','Cementerio de la Recoleta'],
+'el-ateneo':['Librería El Ateneo','Un antiguo teatro convertido en una librería espectacular.','El Ateneo Grand Splendid'],
+'bellas-artes':['Museo de las Bellas Artes','Museo nacional con arte argentino y europeo.','Museo Nacional de Bellas Artes Buenos Aires'],
+'palermo':['Palermo','Parques y lagos de los Bosques de Palermo, con el Planetario.','Planetario Galileo Galilei Buenos Aires'],
+'rosedal':['Rosedal de Palermo','Jardín de rosas con lago y glorietas, ideal para pasear.','Rosedal de Palermo'],
+'puerto-madero':['Puerto Madero','Antiguo puerto con el Puente de la Mujer, lindo de noche.','Puente de la Mujer Puerto Madero']};
+const POS={'casa-rosada':'62% 50%','obelisco':'50% 35%','caminito':'50% 35%','teatro-colon':'48% 50%','el-ateneo':'50% 55%','rosedal':'50% 55%','cementerio':'45% 50%','puerto-madero':'40% 50%'};
+const img=(id,c='')=>`<img src="img/lugares/${id}.jpg" alt="${esc(L[id][0])}" loading="lazy" decoding="async" style="object-position:${POS[id]||'50% 50%'}" class="${c}">`;
+
+/* Itinerario 12–15. El lunes 16 es día de viaje: no hay actividades. */
+const D=[[12,'Jueves 12','Centro Histórico','#0B2A5B','casa-rosada',['casa-rosada','centro-historico','obelisco','teatro-colon','galerias-pacifico']],
+[13,'Viernes 13','La Boca y San Telmo','#E0662B','caminito',['caminito','san-telmo']],
+[14,'Sábado 14','Recoleta','#C2185B','recoleta',['recoleta','cementerio','el-ateneo','bellas-artes']],
+[15,'Domingo 15','Palermo y Puerto Madero','#2E9E5B','rosedal',['palermo','rosedal','puerto-madero']]];
+let V=Store.get('vis',{});
+const dayHtml=d=>`<div class="card day" style="--dc:${d[3]}">${img(d[4],'ph')}<div class="pad"><span class="tag">${d[1]}</span><h3 style="margin-top:6px">${d[2]}</h3><div class="prog" data-prog="${d[0]}"></div>
+ ${d[0]==12?'<div class="key">🔑 Llegar a las 8:30 a. m. al Airbnb para recibir las llaves</div>':''}
+ ${d[5].map(id=>`<details class="pp"><summary><span>${L[id][0]}${id=='puerto-madero'?' · por la noche 🌙':''}</span><span class="vt" data-vt="${id}"></span></summary>${img(id,'pi')}<p>${L[id][1]}</p><a class="btn big" target="_blank" rel="noopener" href="${MAP}${encodeURIComponent(L[id][2]+', Buenos Aires, Argentina')}">📍 ABRIR UBICACIÓN EN GOOGLE MAPS</a><button class="big vb" data-vb="${id}" onclick="togV('${id}')"></button></details>`).join('')}
+ <details><summary>📝 Notas</summary><textarea data-k="dia${d[0]}" placeholder="Escribe aquí..."></textarea></details></div></div>`;
+function paintV(){document.querySelectorAll('[data-vb]').forEach(b=>{const v=!!V[b.dataset.vb];b.classList.toggle('on',v);b.textContent=v?'✔ VISITADO (tocar para quitar)':'☐ MARCAR COMO VISITADO'});
+ document.querySelectorAll('[data-vt]').forEach(s=>s.textContent=V[s.dataset.vt]?'✔':'');
+ D.forEach(d=>{const n=d[5].filter(id=>V[id]).length,e=document.querySelector(`[data-prog="${d[0]}"]`);if(e)e.textContent=`Visitados: ${n} de ${d[5].length}`})}
+function togV(id){if(V[id])delete V[id];else V[id]=1;Store.set('vis',V);paintV()}
+
+/* Vuelos (datos sin cambios) */
+const PI=['mama','papa','raul','mathias'],P=[['Mamá','Angélica Jiménez Carrión'],['Papá','Fidel Santiago Rodríguez'],['Raúl','Raúl Jiménez Jatson'],['Mathias','Mathias Santiago Jiménez']],PC='por confirmar';
+const F=[
+['Miércoles 11 de noviembre','Lima → Buenos Aires','10:40 p. m.','5:05 a. m. (jueves 12)','Jorge Chávez (Lima)','Aeroparque Jorge Newbery','7:40 p. m.',{2:'L5FNFF'},'ida'],
+['Miércoles 11 de noviembre','Lima → Buenos Aires','10:10 p. m.','4:20 a. m. (jueves 12)','Jorge Chávez (Lima)','Aeroparque Jorge Newbery','7:10 p. m.',{0:'LDTUSK',1:PC,3:PC},'ida'],
+['Lunes 16 de noviembre','Buenos Aires → Mendoza','5:00 a. m.','6:55 a. m.','Ezeiza (Ministro Pistarini)','El Plumerillo (Mendoza)','3:00 a. m.',{0:'PYTHNG',1:'PYTHNG',3:'PYTHNG'},'mza'],
+['Lunes 16 de noviembre','Buenos Aires → Lima','5:30 a. m.','8:15 a. m.','Aeroparque Jorge Newbery','Jorge Chávez (Lima)','2:30 a. m.',{2:'L5FNFF'},'vuelta'],
+['Sábado 21 de noviembre','Mendoza → Buenos Aires','11:24 p. m.','1:05 a. m. (domingo 22)','El Plumerillo (Mendoza)','Ezeiza (Ministro Pistarini)','9:24 p. m.',{0:'YFQPWX',1:'YFQPWX',3:'YFQPWX'},'mza'],
+['Martes 24 de noviembre','Buenos Aires → Lima','5:20 a. m.','8:00 a. m.','Aeroparque Jorge Newbery','Jorge Chávez (Lima)','2:20 a. m.',{0:'LDTUSK',1:PC,3:PC},'vuelta']];
+const fc=f=>{const c=f[8]=='mza'?'#8E24AA':'#1E88E5',pen=Object.values(f[7]).some(v=>v==PC);
+ return `<div class="card fl" style="--dc:${c}"><div class="pad"><span class="tag" style="background:${c}">${f[8]=='mza'?'Traslado interno':'Vuelo internacional'}</span>${pen?'<span class="st wa">⏳ Falta confirmar</span>':'<span class="st ok">✔ Confirmado</span>'}
+<h3 style="margin:8px 0 2px">${f[1]}</h3><div><b>📅 ${f[0]}</b></div>
+<div class="hr"><div><small>🛫 SALIDA</small><b>${f[2]}</b><span>${f[4]}</span></div><div><small>🛬 LLEGADA</small><b>${f[3].split(' (')[0]}</b><span>${f[3].includes('(')?'('+f[3].split(' (')[1]+' ':''}${f[5]}</span></div></div>
+<div>🏢 Aerolínea: <b>JetSMART</b></div><div>🧳 Estar en el aeropuerto a las <b>${f[6]}</b></div>
+<div class="sec" style="margin-bottom:2px">Pasajeros</div>
+${Object.keys(f[7]).map(k=>`<div class="pas"><img src="img/familia/${PI[k]}.jpg" alt=""><div><b>${P[k][0]}</b><small>${P[k][1]}</small></div>${f[7][k]==PC?'<span class="cod p">⏳ Código por confirmar</span>':`<span class="cod">${f[7][k]}</span>`}</div>`).join('')}
+</div></div>`};
+$('listaV').innerHTML=`<div class="g2">${F.map(fc).join('')}</div>`;
+
+/* Pantalla de inicio: contador y "hoy" */
+const hd=new Date(),t0=new Date(hd.getFullYear(),hd.getMonth(),hd.getDate()),ini=new Date(2026,10,12),fin=new Date(2026,10,16),dd=Math.round((ini-t0)/864e5);
+const hn=hd.getFullYear()==2026&&hd.getMonth()==10?hd.getDate():0,cur=D.find(d=>d[0]==hn);
+$('cd').innerHTML=t0>fin?'<div class="n">¡Gracias por este viaje! 🇦🇷</div>':t0>=ini?`<small>Estamos en Buenos Aires</small><div class="n">Día ${hn-11} del viaje</div>`:dd==1?'<small>Para empezar el viaje</small><div class="n">Falta 1 día</div>':`<small>Para empezar el viaje</small><div class="n">Faltan ${dd} días</div>`;
+const trip16=F.filter(f=>f[0].startsWith('Lunes 16'));
+const t16=()=>trip16.map(f=>`<li>${f[1]} · sale ${f[2]} (${Object.keys(f[7]).map(k=>P[k][0]).join(', ')})</li>`).join('');
+$('hoy').innerHTML=hn==16?`<b>✈️ HOY · Lunes 16</b><div style="font-size:1.4rem;font-weight:800;margin:4px 0">Día de viaje</div><p>Hoy viajamos. No hay actividades.</p><ul style="padding-left:20px">${t16()}</ul><a class="btn big l mt" href="#vuelos">Ver vuelos</a>`
+ :cur?`<b>☀️ HOY · ${cur[1]}</b><div style="font-size:1.4rem;font-weight:800;margin:4px 0">${cur[2]}</div><ul style="padding-left:20px">${cur[5].map(id=>`<li>${L[id][0]}</li>`).join('')}</ul><a class="btn big l mt" href="#dias">Ver itinerario</a>`
+ :`<b>📅 Primer día · ${D[0][1]}</b><div style="font-size:1.4rem;font-weight:800;margin:4px 0">${D[0][2]}</div><a class="btn big l mt" href="#dias">Ver itinerario</a>`;
+
+/* Itinerario: se añade el día de viaje */
+$('listaDias').innerHTML=D.map(dayHtml).join('')+`<div class="card day" style="--dc:#6D4C9F"><div class="pad"><span class="tag">Lunes 16</span><h3 style="margin-top:6px">Día de viaje ✈️</h3><div class="key">Hoy viajamos. No hay actividades.</div><ul style="padding-left:20px">${t16()}</ul><a class="btn big l mt" href="#vuelos">Ver vuelos</a></div></div>`;
+$('resumen').innerHTML=D.map(d=>`<a class="btn big l mt" href="#dias" style="justify-content:flex-start;text-align:left">${d[1]} · ${d[2]}</a>`).join('')+'<a class="btn big l mt" href="#dias" style="justify-content:flex-start;text-align:left">Lunes 16 · Día de viaje (sin actividades)</a>';
+
+/* Gastos: todo el viaje */
+const CATS=['✈️ Vuelos','🏠 Alojamiento','🍽️ Comida','🚕 Transporte','🎟️ Paseos','🛍️ Compras','📦 Otros'];
+$('cat').innerHTML=CATS.map(c=>`<option>${c}</option>`).join('');
+const MN={'S/':'Soles (S/)','US$':'Dólares (US$)','$ argentinos':'Pesos argentinos'};
+const ld=ts=>new Date(ts-new Date(ts).getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let G=Store.get('gastos',[]).map(g=>({...g,d:g.d||ld(g.id)})),ed=null,del=null;
+function save(){Store.set('gastos',G);pinta()}
+function pinta(){const t={};G.forEach(g=>t[g.m]=(t[g.m]||0)+g.a);
+ const ks=['S/','US$','$ argentinos'].concat(Object.keys(t).filter(k=>!MN[k]));
+ $('totales').innerHTML=ks.map(k=>`<div class="tot"><small>${esc(MN[k]||k)}</small><div class="n">${esc(k)} ${(t[k]||0).toFixed(2)}</div></div>`).join('');
+ const bc={};G.forEach(g=>{const c=g.t||'📦 Otros';bc[c]=bc[c]||{};bc[c][g.m]=(bc[c][g.m]||0)+g.a});
+ const cs=CATS.concat(Object.keys(bc).filter(c=>!CATS.includes(c))).filter(c=>bc[c]);
+ $('porCat').innerHTML=cs.length?cs.map(c=>`<div class="gi"><b>${esc(c)}</b><span style="text-align:right">${Object.keys(bc[c]).map(m=>esc(m)+' '+bc[c][m].toFixed(2)).join('<br>')}</span></div>`).join(''):'<p class="mini">Todavía no hay gastos.</p>';
+ $('histG').innerHTML=G.length?G.slice().sort((a,b)=>b.d.localeCompare(a.d)||b.id-a.id).map(g=>`<div class="gi"><span><b>${esc(g.m)} ${g.a.toFixed(2)}</b><br><small>${+g.d.slice(8)}/${+g.d.slice(5,7)} · ${esc(g.t||'')} ${esc(g.n||g.c||'')}</small></span><span class="a">${del==g.id?`<button class="si" onclick="delOk(${g.id})">Sí, borrar</button><button onclick="del=null;pinta()">No</button>`:`<button aria-label="Editar" onclick="editG(${g.id})">✏️</button><button class="x" aria-label="Borrar" onclick="del=${g.id};pinta()">🗑</button>`}</span></div>`).join(''):'<p class="mini">Todavía no hay gastos.</p>';
+}
+function addG(){const a=parseFloat($('monto').value);if(!(a>0)){$('err').textContent='Escribe el importe.';return}
+ $('err').textContent='';const n=$('nota').value.trim(),t=$('cat').value,m=$('mon').value;
+ if(ed){const g=G.find(x=>x.id==ed);Object.assign(g,{n,a,m,t})}else G.push({id:Date.now(),n,a,m,t,d:ld(Date.now())});
+ cancelE();save()}
+function editG(id){const g=G.find(x=>x.id==id);ed=id;$('nota').value=g.n||g.c||'';$('monto').value=g.a;$('mon').value=g.m;if(g.t)$('cat').value=g.t;$('ft').textContent='Editar gasto';$('bg').textContent='💾 GUARDAR CAMBIOS';$('bc').style.display='flex';$('ft').scrollIntoView({block:'start'})}
+function cancelE(){ed=null;$('nota').value='';$('monto').value='';$('err').textContent='';$('ft').textContent='Anotar un gasto nuevo';$('bg').textContent='➕ GUARDAR';$('bc').style.display='none'}
+function delOk(id){G=G.filter(g=>g.id!=id);del=null;save()}
+function addAir(){const s=parseFloat($('cS').value),u=parseFloat($('cU').value);let n=0;
+ [[s,'S/','airbnb-s'],[u,'US$','airbnb-u']].forEach((x,i)=>{if(x[0]>0&&!G.some(g=>g.k==x[2])){G.push({id:Date.now()+i,n:'Airbnb Buenos Aires',t:'🏠 Alojamiento',a:x[0],m:x[1],d:ld(Date.now()),k:x[2]});n++}});
+ if(!n){$('airMsg').innerHTML='<div class="err">Escribe el costo, o ya está incluido en los gastos.</div>';return}
+ $('airMsg').innerHTML='';save();location.hash='gastos'}
+[['cS','838.40'],['cU','']].forEach(x=>{const e=$(x[0]);e.value=Store.get('cAl'+x[0],x[1]);e.oninput=()=>Store.set('cAl'+x[0],e.value)});
+
+/* Información importante (sin números de documentos) */
+let CK=Store.get('chk',{});
+const ck=(g,items)=>items.map((t,i)=>`<label class="ck"><input type="checkbox" ${CK[g+i]?'checked':''} onchange="togC('${g+i}',this.checked)">${t}</label>`).join('');
+function togC(k,v){if(v)CK[k]=1;else delete CK[k];Store.set('chk',CK)}
+const nt=k=>`<small class="k">📝 Mis notas</small><textarea data-k="info_${k}" placeholder="Escribe aquí..."></textarea>`;
+const mp=(q,t)=>`<a class="btn big l mt" target="_blank" rel="noopener" href="${MAP}${encodeURIComponent(q)}">📍 ${t}</a>`;
+const codes=F.map(f=>`<div class="gi"><span><b>${f[1]}</b><br><small>${f[0]}</small></span><span style="text-align:right">${[...new Set(Object.values(f[7]))].map(c=>c==PC?'⏳ por confirmar':'<b>'+c+'</b>').join('<br>')}</span></div>`).join('');
+const IA=[
+['🪪','Documentos personales',`<p>Por seguridad, aquí no se escriben los números de los documentos. Marca cuando ya los tengas:</p>${ck('doc',['Documento de Mamá','Documento de Papá','Documento de Raúl','Documento de Mathias'])}${nt('doc')}`],
+['📍','Direcciones importantes',`<p><b>Airbnb</b><br>Rodríguez Peña 140, Buenos Aires</p>${mp('Rodríguez Peña 140, Buenos Aires, Argentina','ABRIR AIRBNB EN GOOGLE MAPS')}<p class="mt"><b>Aeropuertos</b></p>${mp('Aeroparque Jorge Newbery, Buenos Aires','Aeroparque Jorge Newbery')}${mp('Aeropuerto Internacional de Ezeiza, Buenos Aires','Ezeiza (Ministro Pistarini)')}${mp('Aeropuerto El Plumerillo, Mendoza','El Plumerillo (Mendoza)')}${nt('dir')}`],
+['🚑','Teléfonos de emergencia',`<p>Números de Argentina. Toca el botón para llamar:</p><div class="ll"><a class="btn big" href="tel:911">🚓 Policía<br>911</a><a class="btn big" href="tel:107">🚑 Ambulancia<br>107</a><a class="btn big" href="tel:100">🚒 Bomberos<br>100</a></div><p class="mini">La ambulancia 107 es para la Ciudad de Buenos Aires.</p>${nt('tel')}`],
+['🎫','Reservas',`<p><b>🏠 Airbnb:</b> llaves el jueves 12, 8:30 a. m.</p><a class="btn big l mt" href="#alojo">Ver alojamiento</a><p class="mt"><b>✈️ Códigos de reserva de vuelos</b></p>${codes}<a class="btn big l mt" href="#vuelos">Ver vuelos</a>${nt('res')}`],
+['🧳','Equipaje',`<p>Lista para marcar:</p>${ck('eq',['Maletas cerradas y con nombre','Cargador del celular','Ropa cómoda','Medicinas personales','Dinero y tarjetas'])}${nt('eq')}`],
+['💡','Recomendaciones para el viaje',`<ul class="tips"><li>Guarda los documentos en un lugar seguro.</li><li>Lleva el celular cargado.</li><li>Usa zapatos cómodos para caminar.</li><li>Toma agua durante los paseos.</li><li>En lugares con mucha gente, lleva la mochila o cartera cerrada y por delante.</li><li>Ve siempre acompañado de la familia.</li></ul>${nt('rec')}`]];
+$('infoL').innerHTML=IA.map(a=>`<details class="card ia"><summary><span>${a[0]} ${a[1]}</span></summary><div class="pad">${a[2]}</div></details>`).join('');
+
+pinta();paintV();bind(document);ir();
+</script></body></html>

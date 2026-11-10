@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B2A5B">
+<title>Buenos Aires 2026 · Viaje familiar</title>
+<style>
+:root{--n:#0B2A5B;--n2:#14407F;--c:#8FD3F4;--c2:#EAF6FD;--l:#CFE9F8;--o:#FFC93C;--ok:#1F9D55;--r:20px;--sh:0 4px 16px rgba(11,42,91,.12)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
+body{font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--n);background:var(--c2);padding:env(safe-area-inset-top) env(safe-area-inset-right) calc(76px + env(safe-area-inset-bottom)) env(safe-area-inset-left);overflow-x:hidden}
+img{max-width:100%;display:block}
+button,.btn{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:16px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;padding:10px 16px;text-align:center}
+.s{display:none;max-width:1100px;margin:auto;padding:14px 14px 24px}.s.on{display:block}
+h2.t{font-size:1.5rem;margin:6px 0 4px}.sub{color:var(--n2);margin-bottom:14px}
+.hero{position:relative;border-radius:28px;overflow:hidden;background:var(--n);color:#fff;box-shadow:var(--sh)}
+.hero>img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%;opacity:.55}
+.hero .in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:linear-gradient(0deg,rgba(11,42,91,.92),rgba(11,42,91,.05) 70%)}
+.hero h1{font-size:clamp(1.6rem,7vw,3rem);line-height:1.05;letter-spacing:.5px}.hero p{font-weight:700;color:var(--c)}
+.chip{display:inline-block;background:var(--c);color:var(--n);font-weight:700;border-radius:30px;padding:5px 12px;margin:6px 4px 0 0;font-size:.85rem}
+.fam{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;max-width:520px;margin-inline:auto}
+.fam div{text-align:center;font-weight:700;font-size:.85rem}
+.fam img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;border-radius:24%;border:3px solid #fff;box-shadow:var(--sh);margin-bottom:4px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:#fff;color:var(--n);flex-direction:column;padding:16px 8px;box-shadow:var(--sh);font-size:.95rem}.tile span{font-size:1.8rem}
+.g3{display:grid;gap:14px;grid-template-columns:1fr}
+.card{background:#fff;border-radius:var(--r);padding:16px;box-shadow:var(--sh);margin-bottom:14px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.row{margin:4px 0}.row b{color:var(--n2)}
+.alert{background:var(--o);border-radius:14px;padding:10px 12px;margin:8px 0;font-weight:700}
+.alert.b{background:var(--l)}
+.pend{color:#B45309;font-weight:700}
+.fz{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none}.fz::-webkit-scrollbar{display:none}
+.fz button{flex:none;background:#fff;color:var(--n);border:2px solid var(--c);min-height:42px;padding:6px 14px;font-size:.9rem}.fz button.on{background:var(--n);color:#fff;border-color:var(--n)}
+.zt{display:flex;align-items:center;gap:8px;margin:18px 0 10px;font-size:1.2rem;font-weight:800}.zt i{width:6px;height:26px;border-radius:4px}
+.pc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);padding:0;display:block;text-align:left;color:inherit;width:100%;font-weight:400}
+.pc img,.ph img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--l)}
+.pc .b{padding:12px 14px}.pc h3{font-size:1.1rem}.pc small{color:var(--n2)}
+.tag{display:inline-block;color:#fff;border-radius:20px;padding:2px 10px;font-size:.75rem;font-weight:700}
+.btn.p{background:var(--n);color:#fff}.btn.l{background:var(--l);color:var(--n)}.btn.ok{background:var(--ok);color:#fff}.btn.off{opacity:.45;pointer-events:none}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.acts .btn{flex:1 1 140px}
+#det{position:fixed;inset:0;z-index:50;background:rgba(11,42,91,.6);display:none;overflow-y:auto;padding:env(safe-area-inset-top) 0 0}
+#det.on{display:block}
+#det .sh{background:var(--c2);max-width:640px;margin:0 auto;min-height:100%;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+#det .cl{position:sticky;top:0;float:right;margin:10px;z-index:2;background:#fff;color:var(--n);box-shadow:var(--sh);width:48px;padding:0;border-radius:50%}
+#det .bd{padding:14px}
+.dc{background:#fff;border-radius:var(--r);box-shadow:var(--sh);margin-bottom:16px;overflow:hidden;border-top:8px solid var(--dc)}
+.dh{display:flex;gap:12px;align-items:center;padding:12px 14px}.dh img,.dh .ph0{width:72px;height:72px;border-radius:16px;object-fit:cover;flex:none}
+.ph0{background:linear-gradient(135deg,var(--c),var(--n2));display:flex;align-items:center;justify-content:center;font-size:2rem}
+.dh h3{font-size:1.1rem}.db{padding:0 14px 14px}
+.pi{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--c2)}.pi img{width:56px;height:42px;object-fit:cover;border-radius:10px;flex:none}.pi div{flex:1;min-width:0;font-size:.9rem}
+.pi a{flex:none;min-height:40px;padding:6px 10px;font-size:.85rem}
+details{margin-top:8px}summary{cursor:pointer;font-weight:700;color:var(--n2);padding:10px 0;min-height:44px}
+label.ck{display:flex;gap:10px;align-items:center;padding:8px 0;min-height:44px}label.ck input{width:24px;height:24px;flex:none}
+textarea,input,select{font:inherit;width:100%;padding:12px;border:2px solid var(--c);border-radius:14px;color:var(--n);background:#fff;min-width:0}
+textarea{min-height:70px;resize:vertical}
+.mt{margin-top:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px;margin:10px 0}
+.cat{background:#fff;color:var(--n);border:2px solid var(--c);padding:8px 4px;flex-direction:column;font-size:.85rem}.cat.sel{background:var(--n);color:#fff;border-color:var(--n)}
+.tot{background:var(--n);color:#fff;border-radius:var(--r);padding:16px;margin-bottom:14px}.tot .n{font-size:1.8rem;font-weight:800;color:var(--c);line-height:1.2}
+.gi{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--c2)}.gi small{color:var(--n2)}
+.gi button{background:#fde2e2;color:#a11;min-height:40px;padding:6px 10px;font-size:.85rem}
+.bar{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.pers{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}.pers button{flex:none;background:#fff;color:var(--n);border:2px solid var(--c);padding:4px 12px 4px 4px;min-height:48px}.pers button img{width:36px;height:36px;border-radius:50%;object-fit:cover}.pers button.on{background:var(--n);color:#fff;border-color:var(--n)}
+#saved{position:fixed;bottom:calc(84px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;padding:8px 18px;border-radius:30px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:60}#saved.on{opacity:1}
+a.tel{color:var(--n2);font-weight:700}
+nav.bn{position:fixed;left:0;right:0;bottom:0;background:#fff;display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(11,42,91,.15);z-index:40}
+nav a{text-decoration:none;color:var(--n);font-weight:600}
+nav.bn a{flex:1;min-width:0;text-align:center;font-size:.68rem;padding:4px 2px;border-radius:14px;min-height:50px}nav.bn a span{display:block;font-size:1.35rem;line-height:1.25}nav a.on{background:var(--l)}
+nav.tn{display:none}
+@media(min-width:640px){.g3{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:repeat(3,1fr)}.hero .in{padding:28px}}
+@media(min-width:900px){body{padding-bottom:20px}nav.bn{display:none}nav.tn{display:flex;position:sticky;top:0;z-index:40;background:var(--n);justify-content:center;gap:4px;padding:8px;flex-wrap:wrap}nav.tn a{color:#fff;padding:8px 14px;border-radius:20px}nav.tn a.on{background:var(--c);color:var(--n)}#saved{bottom:20px}.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.dgrid .dc{margin:0}}
+@media(min-width:1000px){.g3{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<nav class="tn" id="tn"></nav>
+
+<section class="s on" id="inicio">
+ <div class="hero"><img src="img/lugares/portada.jpg" alt="Obelisco y avenida 9 de Julio, Buenos Aires">
+  <div class="in"><p>VIAJE FAMILIAR</p><h1>BUENOS AIRES 2026</h1>
+   <div><span class="chip">📅 11 al 24 de noviembre de 2026</span><span class="chip">Lima ✈ Buenos Aires ✈ Mendoza</span></div></div></div>
+ <div class="fam">
+  <div><img src="img/familia/mama.jpg" alt="Mamá">Mamá</div><div><img src="img/familia/papa.jpg" alt="Papá">Papá</div>
+  <div><img src="img/familia/raul.jpg" alt="Raúl">Raúl</div><div><img src="img/familia/mathias.jpg" alt="Mathias">Mathias</div></div>
+ <div class="tiles" id="tiles"></div>
+</section>
+
+<section class="s" id="lugares"><h2 class="t">📍 Lugares para visitar</h2><p class="sub">Elige un barrio y toca una tarjeta para ver los detalles.</p>
+ <div class="fz" id="fz"></div><div id="listaL"></div></section>
+
+<section class="s" id="dias"><h2 class="t">📅 Itinerario por días</h2><p class="sub">Los vuelos están confirmados. Los lugares marcados como sugerencia están agrupados por cercanía y puedes cambiarlos.</p><div class="dgrid" id="listaDias"></div></section>
+
+<section class="s" id="vuelos"><h2 class="t">✈️ Mis vuelos</h2><p class="sub">Toca una persona para ver sus datos y reservas.</p>
+ <div class="pers" id="pers"></div><div id="pdat"></div><div class="g3" id="listaV"></div></section>
+
+<section class="s" id="alojo"><h2 class="t">🏠 Dónde nos alojaremos</h2><div id="listaA"></div></section>
+
+<section class="s" id="gastos"><h2 class="t">💰 Nuestros gastos</h2><div class="g3" style="align-items:start">
+ <div><div class="card"><h3>Anotar un gasto</h3>
+  <div class="two"><div><label for="gf">Fecha</label><input id="gf" type="date"></div><div><label for="gp">Pagó</label><select id="gp"></select></div></div>
+  <div class="cats" id="cats"></div>
+  <input id="nota" class="mt" placeholder="Descripción (¿en qué?)">
+  <div class="two mt"><input id="monto" type="number" inputmode="decimal" placeholder="Importe"><select id="mon"><option>US$</option><option>S/</option><option>$ argentinos</option></select></div>
+  <button class="btn ok mt" style="width:100%" onclick="addG()">➕ GUARDAR GASTO</button></div></div>
+ <div><div class="tot" id="totales"></div><div class="card" id="resG"></div></div>
+ <div><div class="card"><h3>Lo que hemos gastado</h3><div id="histG"></div>
+  <div class="bar"><button class="btn l" onclick="exp()">⬇ Copia de seguridad</button><label class="btn l" style="margin:0">⬆ Restaurar<input type="file" accept=".json" hidden onchange="imp(event)"></label></div></div></div>
+</div></section>
+
+<section class="s" id="mas"><h2 class="t">Más secciones</h2><div class="tiles" id="tmas"></div></section>
+
+<section class="s" id="info"><h2 class="t">ℹ️ Información y ayuda</h2><div class="g3" style="align-items:start">
+ <div class="card"><h3>🚨 Emergencias en Argentina</h3><div class="row">Policía: <a class="tel" href="tel:911">911</a></div><div class="row">Ambulancia: <a class="tel" href="tel:107">107</a></div><div class="row">Bomberos: <a class="tel" href="tel:100">100</a></div></div>
+ <div class="card"><h3>📞 Teléfonos de la familia</h3><div class="pend">Pendiente: se agregarán los números.</div></div>
+ <div class="card"><h3>🏛️ Consulado / Embajada del Perú</h3><div class="pend">Pendiente: dirección y teléfono.</div></div>
+ <div class="card"><h3>✅ Documentos del viaje</h3>
+  <label class="ck"><input type="checkbox" data-k="d1"> Pasaportes</label><label class="ck"><input type="checkbox" data-k="d2"> Pasajes de avión</label><label class="ck"><input type="checkbox" data-k="d3"> Reserva del Airbnb</label><label class="ck"><input type="checkbox" data-k="d4"> Seguro de viaje</label><label class="ck"><input type="checkbox" data-k="d5"> Dinero y tarjetas</label></div>
+ <div class="card"><h3>💡 Recomendaciones</h3><div class="row">• Lleven siempre una copia del pasaporte.</div><div class="row">• Carguen el celular antes de salir.</div><div class="row">• Tomen agua y descansen en los viajes largos.</div></div></div></section>
+
+<div id="det" onclick="if(event.target===this)cierra()"><div class="sh"><button class="cl" onclick="cierra()" aria-label="Cerrar">✕</button><div id="detc"></div></div></div>
+<div id="saved">✔ Guardado</div>
+<nav class="bn" id="bn"></nav>
+
+<script>
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* Almacenamiento: único punto de acceso. Claves 'arg_*' iguales a la versión anterior (no se pierden gastos).
+   Para Supabase en el futuro, basta reemplazar este objeto Store. */
+const Store={get(k,d){try{const v=JSON.parse(localStorage.getItem('arg_'+k));return v??d}catch(e){return d}},
+ set(k,v){try{localStorage.setItem('arg_'+k,JSON.stringify(v));toast()}catch(e){}},del(k){try{localStorage.removeItem('arg_'+k)}catch(e){}}};
+function toast(){const s=$('saved');s.classList.add('on');setTimeout(()=>s.classList.remove('on'),900)}
+function bind(r){r.querySelectorAll('[data-k]').forEach(e=>{const k=e.dataset.k;if(e.type=='checkbox'){e.checked=Store.get(k,false);e.onchange=()=>Store.set(k,e.checked)}else{e.value=Store.get(k,'');e.oninput=()=>Store.set(k,e.value)}})}
+
+/* Navegación */
+const NAV=[['inicio','🏠','Inicio'],['lugares','📍','Lugares'],['dias','📅','Días'],['vuelos','✈️','Vuelos'],['alojo','🛏️','Alojamiento'],['gastos','💰','Gastos'],['info','ℹ️','Info']];
+const BN=['inicio','lugares','dias','gastos','mas'];
+$('tn').innerHTML=NAV.map(n=>`<a href="#${n[0]}" data-t="${n[0]}">${n[1]} ${n[2]}</a>`).join('');
+$('bn').innerHTML=BN.map(id=>{const n=NAV.find(x=>x[0]==id)||['mas','➕','Más'];return `<a href="#${id}" data-t="${id}"><span>${n[1]}</span>${n[2]}</a>`}).join('');
+$('tiles').innerHTML=NAV.slice(1).map(n=>`<a class="btn tile" href="#${n[0]}"><span>${n[1]}</span>${n[2]}</a>`).join('');
+$('tmas').innerHTML=['vuelos','alojo','info'].map(id=>{const n=NAV.find(x=>x[0]==id);return `<a class="btn tile" href="#${id}"><span>${n[1]}</span>${n[2]}</a>`}).join('');
+function ir(){const id=location.hash.slice(1),ok=document.getElementById(id)&&document.getElementById(id).classList.contains('s')?id:'inicio';
+ document.querySelectorAll('.s').forEach(s=>s.classList.toggle('on',s.id===ok));
+ const act=BN.includes(ok)?ok:'mas';
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t==(a.closest('.bn')?act:ok)));scrollTo(0,0)}
+addEventListener('hashchange',ir);
+
+/* Lugares */
+const Z={centro:['Centro Histórico','#0B2A5B'],boca:['La Boca','#E0662B'],telmo:['San Telmo','#8A4FBF'],madero:['Puerto Madero','#0E9AA7'],recoleta:['Recoleta','#C2185B'],palermo:['Palermo','#2E9E5B']};
+const PV='Por verificar antes de ir (no confirmado)';
+// [id, zona, nombre, barrio, dirección, búsqueda en Maps, descripción, tiempo estimado, recomendación, object-position]
+const L=[
+['centro-historico','centro','Centro Histórico','Monserrat','Plaza de Mayo','Plaza de Mayo','El corazón histórico de la ciudad: la Plaza de Mayo y las avenidas y edificios que la rodean. Punto de partida ideal para conocer Buenos Aires.','1,5 a 2 h','Recórranlo a pie y con calma; combina bien con la Casa Rosada.','50% 50%'],
+['casa-rosada','centro','Casa Rosada','Monserrat','Balcarce 50','Casa Rosada Balcarce 50','Sede del gobierno argentino, famosa por su fachada rosada frente a la Plaza de Mayo. Una de las fotos obligadas del viaje.','45 min','Las mejores fotos se toman desde la plaza, con luz de la tarde.','62% 50%'],
+['obelisco','centro','Obelisco','San Nicolás','Plaza de la República (Av. 9 de Julio y Av. Corrientes)','Obelisco','El gran símbolo de la ciudad, en medio de la avenida 9 de Julio, una de las más anchas del mundo.','30 a 45 min','Crucen con cuidado y tomen la foto desde las veredas de Corrientes.','50% 35%'],
+['teatro-colon','centro','Teatro Colón','San Nicolás','Cerrito 628','Teatro Colón Cerrito 628','Uno de los teatros de ópera más importantes del mundo, con una arquitectura y acústica admiradas internacionalmente.','1 a 1,5 h','Si desean entrar, conviene revisar y reservar la visita en el sitio oficial.','48% 50%'],
+['galerias-pacifico','centro','Galerías Pacífico','Microcentro','Florida 753','Galerías Pacífico Florida 753','Histórica galería comercial en la peatonal Florida, famosa por sus cúpulas pintadas con murales.','1 h','Miren hacia arriba para ver los murales de la cúpula.','50% 40%'],
+['caminito','boca','Caminito (La Boca)','La Boca','Calle Caminito, La Boca','Caminito La Boca','Calle-museo de casas pintadas de mil colores, ícono del barrio de La Boca y del tango. Ideal para fotos.','1 a 1,5 h','Quédense en la zona turística de Caminito y los alrededores inmediatos; vayan de día.','50% 35%'],
+['san-telmo','telmo','San Telmo','San Telmo','Plaza Dorrego (Defensa y Humberto 1°)','Plaza Dorrego San Telmo','Barrio de calles empedradas, anticuarios y cafés, con su famosa feria de antigüedades en la Plaza Dorrego.','2 a 3 h','La feria de antigüedades suele ser los domingos; verifiquen el día antes de ir.','50% 50%'],
+['puerto-madero','madero','Puerto Madero','Puerto Madero','Puente de la Mujer, Av. Alicia Moreau de Justo','Puente de la Mujer Puerto Madero','Antiguo puerto convertido en un moderno paseo junto al agua, con el icónico Puente de la Mujer y los rascacielos.','1,5 a 2 h','Caminen por los diques al atardecer.','40% 50%'],
+['recoleta','recoleta','Recoleta','Recoleta','Plaza Naciones Unidas (Floralis Genérica), Av. Figueroa Alcorta y Austria','Floralis Genérica','Barrio elegante de plazas y parques; aquí está la Floralis Genérica, la gran flor de metal que se abre y se cierra.','1 h','Combínenla con el cementerio y el museo, que quedan cerca.','50% 50%'],
+['cementerio','recoleta','Cementerio de la Recoleta','Recoleta','Junín 1760','Cementerio de la Recoleta','Cementerio-museo con mausoleos monumentales y esculturas, uno de los más famosos de Sudamérica.','1,5 h','Lleven calzado cómodo; es un lugar de respeto.','45% 50%'],
+['el-ateneo','recoleta','Librería El Ateneo','Recoleta','Av. Santa Fe 1860','El Ateneo Grand Splendid Av. Santa Fe 1860','Antiguo teatro convertido en una de las librerías más bellas del mundo; el escenario es ahora una cafetería.','45 min a 1 h','Suban a los palcos para ver el conjunto de la sala.','50% 55%'],
+['bellas-artes','recoleta','Museo de las Bellas Artes','Recoleta','Av. del Libertador 1473','Museo Nacional de Bellas Artes Av. del Libertador 1473','Museo nacional con arte argentino y europeo. Un buen plan cultural en Recoleta.','1,5 a 2 h','Verifiquen los días y horarios de apertura antes de ir.','50% 50%'],
+['palermo','palermo','Palermo','Palermo','Bosques de Palermo (Planetario Galileo Galilei)','Planetario Galileo Galilei Buenos Aires','Los extensos Bosques de Palermo, con parques, lagos y el Planetario Galileo Galilei, para pasear al aire libre.','2 a 3 h','Un día tranquilo de parque; lleven agua y protector solar.','50% 50%'],
+['rosedal','palermo','Rosedal de Palermo','Palermo','Parque Tres de Febrero, Av. de la Infanta Isabel','Rosedal de Palermo','Jardín de rosas con lago, glorietas y senderos dentro del Parque Tres de Febrero.','1 h','Cerca del Planetario: pueden combinarlos en la misma salida.','50% 55%']];
+const LP=Object.fromEntries(L.map(p=>[p[0],p]));
+const MAP='https://www.google.com/maps/',qq=s=>encodeURIComponent(s+', Buenos Aires, Argentina');
+const mapU=p=>MAP+'search/?api=1&query='+qq(p[5]),rutaU=p=>MAP+'dir/?api=1&travelmode=walking&destination='+qq(p[5]);
+const pimg=(p,c='')=>`<img src="img/lugares/${p[0]}.jpg" alt="${esc(p[2])}" loading="lazy" decoding="async" style="object-position:${p[9]}" class="${c}">`;
+let fz='all';
+function pintaL(){
+ $('fz').innerHTML=`<button class="${fz=='all'?'on':''}" onclick="fz='all';pintaL()">Todos (14)</button>`+Object.keys(Z).map(z=>`<button class="${fz==z?'on':''}" onclick="fz='${z}';pintaL()">${Z[z][0]}</button>`).join('');
+ $('listaL').innerHTML=Object.keys(Z).filter(z=>fz=='all'||fz==z).map(z=>`<div class="zt"><i style="background:${Z[z][1]}"></i>${Z[z][0]}</div><div class="g3">`+L.filter(p=>p[1]==z).map(p=>`<button class="pc" onclick="verL('${p[0]}')">${pimg(p)}<div class="b"><span class="tag" style="background:${Z[z][1]}">${Z[z][0]}</span><h3>${p[2]}</h3><small>📍 ${p[4]}</small></div></button>`).join('')+'</div>').join('')}
+function verL(id){const p=LP[id];$('detc').innerHTML=`<div class="ph">${pimg(p)}</div><div class="bd"><span class="tag" style="background:${Z[p[1]][1]}">${Z[p[1]][0]}</span><h2 class="t">${p[2]}</h2>
+ <p>${p[6]}</p><div class="card mt"><div class="row"><b>Barrio:</b> ${p[3]}</div><div class="row"><b>Dirección:</b> ${p[4]}</div><div class="row"><b>Horarios:</b> <span class="pend">${PV}</span></div><div class="row"><b>Precio de entrada:</b> <span class="pend">${PV}</span></div><div class="row"><b>Tiempo estimado:</b> ${p[7]}</div><div class="row"><b>Recomendación:</b> ${p[8]}</div></div>
+ <div class="acts"><a class="btn p" target="_blank" rel="noopener" href="${mapU(p)}">📍 Abrir en Google Maps</a><a class="btn l" target="_blank" rel="noopener" href="${rutaU(p)}">🧭 Cómo llegar</a></div></div>`;
+ $('det').classList.add('on');document.body.style.overflow='hidden';$('det').scrollTop=0}
+function cierra(){$('det').classList.remove('on');document.body.style.overflow=''}
+addEventListener('keydown',e=>e.key=='Escape'&&cierra());
+
+/* Itinerario */
+const sem=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+const VD={11:'✈️ 10:10 p. m. sale el vuelo a Buenos Aires (Raúl: 10:40 p. m.)',12:'🛬 Llegada a Buenos Aires: 4:20 a. m. (Raúl: 5:05 a. m.)',16:'✈️ 5:00 a. m. vuelo a Mendoza (desde Ezeiza). Raúl vuelve a Lima 5:30 a. m. (desde Aeroparque)',21:'✈️ 11:24 p. m. sale el vuelo Mendoza → Buenos Aires',22:'🛬 1:05 a. m. llegada a Buenos Aires (Ezeiza)',24:'✈️ 5:20 a. m. vuelo de regreso a Lima (desde Aeroparque)'};
+// Sugerencia por cercanía (NO confirmada): solo en días de Buenos Aires con tiempo libre
+const SUG={13:['centro-historico','casa-rosada','puerto-madero'],14:['obelisco','teatro-colon','galerias-pacifico'],15:['san-telmo','caminito'],22:['recoleta','cementerio','el-ateneo','bellas-artes'],23:['palermo','rosedal']};
+const COL=['#0B2A5B','#1E88E5','#00ACC1','#43A047','#F9A825','#EF6C00','#E53935','#8E24AA','#5E35B1','#3949AB','#00897B','#6D4C41','#D81B60','#546E7A'];
+const loc=d=>d==11?'Lima':(d>=16&&d<=21?'Mendoza':'Buenos Aires');
+const plan=d=>Store.get('plan'+d,null),opn={};
+$('listaDias').innerHTML=Array.from({length:14},(_,i)=>`<div class="dc" id="day${i+11}" style="--dc:${COL[i]}"></div>`).join('');
+function pintaDia(d){const f=new Date(2026,10,d),lg=loc(d),st=plan(d),ids=st||SUG[d]||[],ps=ids.map(i=>LP[i]);
+ const ttl=(sem[f.getDay()]+' '+d+' de noviembre').replace(/^./,c=>c.toUpperCase());
+ const ph=ps[0]?pimg(ps[0]):d<=12?`<img src="img/lugares/portada.jpg" alt="" loading="lazy">`:`<div class="ph0">${lg=='Mendoza'?'⛰️':'🏙️'}</div>`;
+ const BA=lg=='Buenos Aires';
+ let h=`<div class="dh">${ph}<div><h3>${ttl}</h3><span class="tag" style="background:var(--dc)">${lg}</span></div></div><div class="db">`;
+ if(VD[d])h+=`<div class="alert b">${VD[d]}</div>`;
+ if(BA||ps.length){
+  if(ps.length)h+=`<div class="row"><span class="tag" style="background:${st?'#1F9D55':'#B45309'}">${st?'Plan elegido':'Sugerencia por cercanía · por confirmar'}</span></div>`+ps.map(p=>`<div class="pi">${pimg(p)}<div><b>${p[2]}</b><br>${p[4]}<br><small>Hora por definir · ${p[7]}</small></div><a class="btn l" target="_blank" rel="noopener" href="${mapU(p)}">📍</a></div>`).join('');
+  else h+=`<div class="row pend">${d==12||d==24?'Día de viaje: sin visitas fijadas.':'Sin lugares elegidos todavía.'}</div>`;
+  if(ps.length)h+=`<div class="acts"><a class="btn p" target="_blank" rel="noopener" href="${MAP}dir/?api=1&travelmode=walking&origin=${qq(ps[0][5])}&destination=${qq(ps[ps.length-1][5])}${ps.length>2?'&waypoints='+ps.slice(1,-1).map(p=>qq(p[5])).join('%7C'):''}">🧭 Ver ruta del día</a>${!st&&SUG[d]?`<button class="btn ok" onclick="Store.set('plan${d}',SUG[${d}]);pintaDia(${d})">✔ Confirmar</button>`:''}</div>`;
+  if(d!=24&&d!=11)h+=`<details ${opn[d]?'open':''} ontoggle="opn[${d}]=this.open"><summary>✏️ Elegir lugares de este día</summary>`+Object.keys(Z).map(z=>`<div class="row"><b style="color:${Z[z][1]}">${Z[z][0]}</b></div>`+L.filter(p=>p[1]==z).map(p=>`<label class="ck"><input type="checkbox" ${ids.includes(p[0])?'checked':''} onchange="tog(${d},'${p[0]}',this.checked)"> ${p[2]}</label>`).join('')).join('')+(st?`<button class="btn l mt" onclick="Store.del('plan${d}');pintaDia(${d})">↩ Volver a la sugerencia</button>`:'')+'</details>'}
+ else if(lg=='Mendoza')h+=`<div class="row pend">Mendoza se desarrollará en la fase 2.</div>`;
+ h+=`<div class="row mt"><b>🚌 Transporte:</b></div><input data-k="tr${d}" placeholder="Por definir"><div class="row mt"><b>📝 Observaciones:</b></div><textarea data-k="dia${d}" placeholder="Por definir..."></textarea></div>`;
+ $('day'+d).innerHTML=h;bind($('day'+d))}
+function tog(d,id,on){let a=(plan(d)||SUG[d]||[]).slice();a=on?a.concat(id):a.filter(x=>x!=id);a.sort((x,y)=>L.findIndex(p=>p[0]==x)-L.findIndex(p=>p[0]==y));Store.set('plan'+d,a);pintaDia(d)}
+for(let d=11;d<=24;d++)pintaDia(d);
+
+/* Vuelos (datos sin cambios) */
+const P=[['Mamá','Angélica Jiménez Carrión','09797015'],['Papá','Fidel Santiago Rodríguez','10281370'],['Raúl','Raúl Jiménez Jatson','73151000'],['Mathias','Mathias Santiago Jiménez','72331096']],PI=['mama','papa','raul','mathias'],PC='por confirmar';
+const F=[
+['Miércoles 11 de noviembre','Lima → Buenos Aires','10:40 p. m.','5:05 a. m. (jueves 12)','Jorge Chávez (Lima)','Aeroparque Jorge Newbery','7:40 p. m.',{2:'L5FNFF'},'ida'],
+['Miércoles 11 de noviembre','Lima → Buenos Aires','10:10 p. m.','4:20 a. m. (jueves 12)','Jorge Chávez (Lima)','Aeroparque Jorge Newbery','7:10 p. m.',{0:'LDTUSK',1:PC,3:PC},'ida'],
+['Lunes 16 de noviembre','Buenos Aires → Mendoza','5:00 a. m.','6:55 a. m.','Ezeiza (Ministro Pistarini)','El Plumerillo (Mendoza)','3:00 a. m.',{0:'PYTHNG',1:'PYTHNG',3:'PYTHNG'},'mza'],
+['Lunes 16 de noviembre','Buenos Aires → Lima','5:30 a. m.','8:15 a. m.','Aeroparque Jorge Newbery','Jorge Chávez (Lima)','2:30 a. m.',{2:'L5FNFF'},'vuelta'],
+['Sábado 21 de noviembre','Mendoza → Buenos Aires','11:24 p. m.','1:05 a. m. (domingo 22)','El Plumerillo (Mendoza)','Ezeiza (Ministro Pistarini)','9:24 p. m.',{0:'YFQPWX',1:'YFQPWX',3:'YFQPWX'},'mza'],
+['Martes 24 de noviembre','Buenos Aires → Lima','5:20 a. m.','8:00 a. m.','Aeroparque Jorge Newbery','Jorge Chávez (Lima)','2:20 a. m.',{0:'LDTUSK',1:PC,3:PC},'vuelta']];
+const FT={ida:['Ida','#1E88E5'],mza:['Mendoza','#8E24AA'],vuelta:['Regreso a Lima','#EF6C00']};
+let fp=-1;
+function pintaV(){
+ $('pers').innerHTML=`<button class="${fp<0?'on':''}" onclick="fp=-1;pintaV()" style="padding:4px 14px">👥 Todos</button>`+P.map((p,i)=>`<button class="${fp==i?'on':''}" onclick="fp=${i};pintaV()"><img src="img/familia/${PI[i]}.jpg" alt="">${p[0]}</button>`).join('');
+ $('pdat').innerHTML=fp<0?'':`<div class="card"><h3>${P[fp][0]}</h3><div class="row">${P[fp][1]}<br>DNI ${P[fp][2]}</div></div>`;
+ $('listaV').innerHTML=F.filter(f=>fp<0||fp in f[7]).map(f=>{const t=FT[f[8]];
+  return `<div class="card" style="border-top:8px solid ${t[1]}"><span class="tag" style="background:${t[1]}">${t[0]}</span><h3 class="mt">${f[1]}</h3>
+<div class="row"><b>Día:</b> ${f[0]}</div><div class="row"><b>Sale a las:</b> ${f[2]}<br>${f[4]}</div><div class="row"><b>Llega a las:</b> ${f[3]}<br>${f[5]}</div><div class="row"><b>Aerolínea:</b> JetSMART</div>
+<div class="row"><b>Pasajeros y n.º de reserva:</b></div>`+Object.keys(f[7]).filter(k=>fp<0||k==fp).map(k=>`<div class="row">• ${P[k][0]}: <b>${f[7][k]}</b></div>`).join('')+
+  `<div class="alert">⏰ Estar en el aeropuerto a las ${f[6]}</div></div>`}).join('')+`<p class="row" style="grid-column:1/-1;font-size:.85rem">La hora del aeropuerto es una sugerencia: 3 horas antes si sale del país, 2 horas antes dentro de Argentina.</p>`}
+
+/* Alojamiento: completar aquí cuando lleguen los datos (vacío = pendiente) */
+const ALOJ={dir:'',airbnb:'',checkin:'',checkout:'',anfitrion:''};
+const pv=v=>v?esc(v):'<span class="pend">Pendiente de completar</span>';
+$('listaA').innerHTML=`<div class="card"><h3>Buenos Aires · Airbnb</h3><div class="alert">PENDIENTE DE CONFIRMACIÓN</div>
+ <div class="row"><b>Dirección:</b> ${pv(ALOJ.dir)}</div><div class="row"><b>Check-in:</b> ${pv(ALOJ.checkin)}</div><div class="row"><b>Check-out:</b> ${pv(ALOJ.checkout)}</div><div class="row"><b>Anfitrión:</b> ${pv(ALOJ.anfitrion)}</div>
+ <div class="row"><b>Fotografías:</b> <span class="pend">Pendiente: se agregarán las fotos reales del alojamiento.</span></div>
+ <div class="acts"><a class="btn p ${ALOJ.airbnb?'':'off'}" target="_blank" rel="noopener" href="${esc(ALOJ.airbnb||'#')}">🏠 Ver en Airbnb</a><a class="btn l ${ALOJ.dir?'':'off'}" target="_blank" rel="noopener" href="${MAP}search/?api=1&query=${encodeURIComponent(ALOJ.dir)}">📍 Google Maps</a><a class="btn l ${ALOJ.dir?'':'off'}" target="_blank" rel="noopener" href="${MAP}dir/?api=1&destination=${encodeURIComponent(ALOJ.dir)}">🧭 Cómo llegar</a></div></div>
+<div class="card"><h3>Mendoza · Alojamiento</h3><div class="alert">PENDIENTE DE CONFIRMACIÓN</div><div class="row">Se desarrollará en la fase 2.</div></div>
+<div class="card"><h3>📝 Notas</h3><textarea data-k="notaAlojo" placeholder="Escribe aquí lo que quieras recordar..."></textarea></div>`;
+
+/* Gastos (misma clave 'gastos'; registros antiguos se completan al leerlos) */
+const C=[['🍽️','Comida'],['🚕','Transporte'],['🎟️','Turismo'],['🛍️','Compras'],['📦','Otros']];
+const ld=ts=>new Date(ts-new Date(ts).getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let cat='Comida',G=Store.get('gastos',[]).map(g=>({...g,d:g.d||ld(g.id),p:g.p||''}));
+$('gp').innerHTML='<option value="">¿Quién pagó?</option>'+P.map(p=>`<option>${p[0]}</option>`).join('')+'<option>Otro</option>';
+$('gf').value=ld(Date.now());
+const sum=(a,fn)=>{const m={};a.forEach(g=>{const k=fn(g);(m[k]=m[k]||{})[g.m]=((m[k]||{})[g.m]||0)+g.a});return m};
+const mon=o=>Object.keys(o).map(x=>`${x} ${o[x].toFixed(2)}`).join(' · ');
+const dm=d=>+d.slice(8)+'/'+ +d.slice(5,7);
+function pintaCats(){$('cats').innerHTML=C.map(c=>`<button class="cat ${c[1]==cat?'sel':''}" onclick="cat='${c[1]}';pintaCats()"><span>${c[0]}</span>${c[1]}</button>`).join('')}
+function pintaG(){
+ const t=sum(G,()=>'x').x||{},k=Object.keys(t);
+ $('totales').innerHTML='Total gastado (cada moneda por separado)'+(k.length?k.map(x=>`<div class="n">${x} ${t[x].toFixed(2)}</div>`).join(''):'<div class="n">0.00</div>');
+ const bd=sum(G,g=>g.d),bc=sum(G,g=>g.c),sec=(ti,o,fm)=>Object.keys(o).length?`<h3 class="mt">${ti}</h3>`+Object.keys(o).map(x=>`<div class="row"><b>${fm(x)}</b>: ${mon(o[x])}</div>`).join(''):'';
+ $('resG').innerHTML=G.length?'<h3>Resumen</h3>'+sec('Por día',bd,dm).replace(/^/,'')+sec('Por categoría',bc,x=>(C.find(c=>c[1]==x)||['',x])[0]+' '+x)+`<h3 class="mt">Por moneda</h3>`+k.map(x=>`<div class="row"><b>${x}</b>: ${t[x].toFixed(2)} (${G.filter(g=>g.m==x).length} gastos)</div>`).join(''):'<h3>Resumen</h3><div class="row">Aquí verás gastos por día, categoría y moneda.</div>';
+ $('histG').innerHTML=G.length?G.slice().sort((a,b)=>b.d.localeCompare(a.d)||b.id-a.id).map(g=>`<div class="gi"><span>${(C.find(c=>c[1]==g.c)||['📦'])[0]} <b>${g.m} ${g.a.toFixed(2)}</b><br><small>${dm(g.d)} · ${esc(g.n||g.c)}${g.p?' · pagó '+esc(g.p):''}</small></span><button onclick="delG(${g.id})">Borrar</button></div>`).join(''):'Todavía no hay gastos.'}
+function addG(){const a=parseFloat($('monto').value);if(!(a>0)){alert('Escribe el importe.');return}
+ G.push({id:Date.now(),c:cat,a:a,m:$('mon').value,n:$('nota').value,d:$('gf').value||ld(Date.now()),p:$('gp').value});Store.set('gastos',G);$('monto').value='';$('nota').value='';pintaG()}
+function delG(id){if(confirm('¿Borrar este gasto?')){G=G.filter(g=>g.id!=id);Store.set('gastos',G);pintaG()}}
+function exp(){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith('arg_'))o[k]=localStorage.getItem(k)}const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(o)],{type:'application/json'}));a.download='viaje-ba-2026-copia.json';a.click()}
+function imp(e){const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{const o=JSON.parse(t);Object.keys(o).forEach(k=>k.startsWith('arg_')&&localStorage.setItem(k,o[k]));location.reload()}catch(x){alert('Archivo no válido')}})}
+/* Datos de Mendoza (fase 2, no se muestran todavía): Parque General San Martín, Plaza Independencia, Cerro de la Gloria. Plaza de Mayo está dentro de Centro Histórico. */
+pintaCats();pintaG();pintaL();pintaV();bind($('info'));bind($('listaA'));ir();
+</script></body></html>
